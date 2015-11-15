@@ -111,7 +111,7 @@ function thds_register_post_types() {
 
 	// Set up the arguments for the theme post type.
 	$theme_args = array(
-		'thdscription'         => '',//thds_get_portfolio_thdscription(),
+		'description'         => thds_get_archive_description(),
 		'public'              => true,
 		'publicly_queryable'  => true,
 		'show_in_nav_menus'   => false,
