@@ -6,6 +6,9 @@ add_filter( 'template_include', 'thds_template_include', 5 );
 # Filter prior to getting posts from the DB.
 add_action( 'pre_get_posts', 'thds_pre_get_posts' );
 
+# Redirect non-authors.
+add_action( 'template_redirect', 'thds_template_redirect', 5 );
+
 # Filter the document title.
 add_filter( 'document_title_parts', 'thds_document_title_parts', 5 );
 
@@ -124,6 +127,24 @@ function thds_pre_get_posts( $query ) {
 		$query->set( 'posts_per_page', thds_get_themes_per_page() );
 		$query->set( 'orderby',        thds_get_themes_orderby()  );
 		$query->set( 'order',          thds_get_themes_order()    );
+	}
+}
+
+/**
+ * Redirects author requests for users who have not published any themes to the
+ * theme archive page.
+ *
+ * @since  1.0.0
+ * @access public
+ * @global object  $wp_the_query
+ * @return void
+ */
+function thds_template_redirect() {
+	global $wp_the_query;
+
+	if ( thds_is_author() && 0 >= $wp_the_query->post_count ) {
+		wp_redirect( esc_url_raw( thds_get_theme_archive_url() ) );
+		exit();
 	}
 }
 
