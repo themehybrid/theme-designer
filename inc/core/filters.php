@@ -22,6 +22,9 @@ add_filter( 'post_type_link', 'thds_post_type_link', 10, 2 );
 # Filter the post author link.
 add_filter( 'author_link', 'thds_author_link_filter', 10, 3 );
 
+# Filter the post class.
+add_filter( 'post_class', 'thds_post_class', 10, 3 );
+
 # Force taxonomy term selection.
 add_action( 'save_post', 'thds_force_term_selection' );
 
@@ -237,6 +240,24 @@ function thds_post_type_link( $post_link, $post ) {
 function thds_author_link_filter( $url, $author_id, $nicename ) {
 
 	return thds_is_theme() ? thds_get_author_url( $author_id ) : $url;
+}
+
+/**
+ * Filter the post class.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $classes
+ * @param  string $class
+ * @param  int    $post_id
+ * @return array
+ */
+function thds_post_class( $classes, $class, $post_id ) {
+
+	if ( thds_is_theme( $post_id ) && thds_is_theme_archive() && thds_is_theme_sticky( $post_id ) && ! is_paged() )
+		$classes[] = 'sticky';
+
+	return $classes;
 }
 
 /**
