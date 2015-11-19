@@ -108,6 +108,30 @@ function thds_is_child_theme( $theme_id = 0 ) {
 /* ====== Wrapper Functions ====== */
 
 /**
+ * Prints the theme archive URL.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function thds_theme_archive_url() {
+
+	echo esc_url( thds_get_theme_archive_url() );
+}
+
+/**
+ * Returns the theme archive URL.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return string
+ */
+function thds_get_theme_archive_url() {
+
+	return apply_filters( 'thds_get_theme_archive_url', get_post_type_archive_link( thds_get_theme_post_type() ) );
+}
+
+/**
  * Displays the theme URL.
  *
  * @since  1.0.0
