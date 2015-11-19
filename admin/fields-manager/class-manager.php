@@ -57,6 +57,15 @@ class THDS_Fields_Manager {
 	public $settings = array();
 
 	/**
+	 * Array of sections that have controls.
+	 *
+	 * @since  1.0.0
+	 * @access private
+	 * @var    array
+	 */
+	private $sections_with_controls = array();
+
+	/**
 	 * Sets up the manager.
 	 *
 	 * @since  1.0.0
@@ -95,6 +104,12 @@ class THDS_Fields_Manager {
 
 		// Hook before registering.
 		do_action( "thds_{$this->name}_manager_register", $this );
+
+		foreach ( $this->controls as $control )
+			$this->sections_with_controls[] = $control->section;
+
+		$this->sections_with_controls = array_unique( $this->sections_with_controls );
+
 	}
 
 	/**
@@ -302,6 +317,9 @@ class THDS_Fields_Manager {
 
 		<?php foreach ( $this->sections as $section ) : ?>
 
+			<?php if ( ! in_array( $section->name, $this->sections_with_controls ) )
+				continue; ?>
+
 			<?php $icon = preg_match( '/dashicons-/', $section->icon ) ? sprintf( 'dashicons %s', sanitize_html_class( $section->icon ) ) : esc_attr( $section->icon ); ?>
 
 			<li>
@@ -328,6 +346,9 @@ class THDS_Fields_Manager {
 		<div class="thds-fields-content">
 
 		<?php foreach ( $this->sections as $section ) : ?>
+
+			<?php if ( ! in_array( $section->name, $this->sections_with_controls ) )
+				continue; ?>
 
 			<div id="<?php echo esc_attr( "thds-fields-section-{$section->name}" ); ?>" class="thds-fields-section <?php echo esc_attr( "thds-fields-section-{$section->name}" ); ?>">
 
