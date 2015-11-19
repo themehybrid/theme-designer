@@ -126,7 +126,7 @@ function thds_register_post_types() {
 		'hierarchical'        => false,
 		'has_archive'         => thds_get_rewrite_base(),
 		'query_var'           => 'theme_project',
-		'capability_type'     => 'theme',
+		'capability_type'     => 'theme_project',
 		'map_meta_cap'        => true,
 		'capabilities'        => thds_get_theme_capabilities(),
 		'labels'              => thds_get_theme_labels(),
