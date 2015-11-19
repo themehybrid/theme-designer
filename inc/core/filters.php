@@ -28,6 +28,25 @@ add_filter( 'post_class', 'thds_post_class', 10, 3 );
 # Force taxonomy term selection.
 add_action( 'save_post', 'thds_force_term_selection' );
 
+# Theme content filters.
+add_filter( 'thds_get_theme_content', array( $GLOBALS['wp_embed'], 'run_shortcode' ), 5 );
+add_filter( 'thds_get_theme_content', array( $GLOBALS['wp_embed'], 'autoembed'     ), 5 );
+add_filter( 'thds_get_theme_content', 'wptexturize',                                  5 );
+add_filter( 'thds_get_theme_content', 'convert_smilies',                              5 );
+add_filter( 'thds_get_theme_content', 'convert_chars',                                5 );
+add_filter( 'thds_get_theme_content', 'wpautop',                                      5 );
+add_filter( 'thds_get_theme_content', 'shortcode_unautop',                            5 );
+add_filter( 'thds_get_theme_content', 'do_shortcode',                                 5 );
+add_filter( 'thds_get_theme_content', 'wp_make_content_images_responsive',            5 );
+
+# Theme excerpt filters.
+add_filter( 'thds_get_theme_excerpt', 'wptexturize',       5 );
+add_filter( 'thds_get_theme_excerpt', 'convert_smilies',   5 );
+add_filter( 'thds_get_theme_excerpt', 'convert_chars',     5 );
+add_filter( 'thds_get_theme_excerpt', 'wpautop',           5 );
+add_filter( 'thds_get_theme_excerpt', 'shortcode_unautop', 5 );
+add_filter( 'thds_get_theme_content', 'do_shortcode',      5 );
+
 /**
  * Basic top-level template hierarchy. I generally prefer to leave this functionality up to
  * themes.  This is just a foundation to build upon if needed.
@@ -59,6 +78,15 @@ function thds_template_include( $template ) {
 
 	// Single theme.
 	} else if ( thds_is_single_theme() ) {
+
+		$post_template = get_post_meta( get_queried_object_id(), '_wp_theme_template', true );
+
+		if ( '' === $post_template )
+			$post_template = get_post_meta( get_queried_object_id(), 'template', true );
+
+		if ( $post_template )
+			$templates[] = $post_template;
+
 		$templates[] = 'theme-single.php';
 	}
 
