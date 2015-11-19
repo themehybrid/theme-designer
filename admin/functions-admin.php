@@ -187,9 +187,12 @@ function thds_theme_details_register( $manager ) {
 	$manager->register_control( 'support_url',     $support_url_args     );
 	$manager->register_control( 'translate_url',   $translate_url_args   );
 	$manager->register_control( 'docs_url',        $docs_url_args        );
-	$manager->register_control( 'wporg_slug',      $wporg_slug_args      );
+
+	if ( thds_use_wporg_api() )
+		$manager->register_control( 'wporg_slug',      $wporg_slug_args      );
+
 	//$manager->register_control( 'github_slug',     $github_slug_args     );
-	$manager->register_control( 'edd_download_id', $edd_download_id_args );
+	//$manager->register_control( 'edd_download_id', $edd_download_id_args );
 
 
 	$manager->register_control( new THDS_Fields_Control_Parent( $manager, 'parent_id', $parent_theme_args ) );
@@ -206,10 +209,11 @@ function thds_theme_details_register( $manager ) {
 	$manager->register_setting( 'support_url',     array( 'sanitize_callback' => 'esc_url_raw' ) );
 	$manager->register_setting( 'translate_url',   array( 'sanitize_callback' => 'esc_url_raw' ) );
 	$manager->register_setting( 'docs_url',        array( 'sanitize_callback' => 'esc_url_raw' ) );
-	$manager->register_setting( 'wporg_slug',      array( 'sanitize_callback' => 'sanitize_title_with_dashes' ) );
-	//$manager->register_setting( 'github_slug',     array( 'sanitize_callback' => 'strip_tags' ) );
-	$manager->register_setting( 'edd_download_id', array( 'sanitize_callback' => 'absint' ) );
 
+	if ( thds_use_wporg_api() )
+		$manager->register_setting( 'wporg_slug',      array( 'sanitize_callback' => 'sanitize_title_with_dashes' ) );
+	//$manager->register_setting( 'github_slug',     array( 'sanitize_callback' => 'strip_tags' ) );
+	//$manager->register_setting( 'edd_download_id', array( 'sanitize_callback' => 'absint' ) );
 }
 
 /**
