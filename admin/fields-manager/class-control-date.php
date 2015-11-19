@@ -47,7 +47,7 @@ class THDS_Fields_Control_Date extends THDS_Fields_Control {
 			<?php endif; ?>
 
 			<?php // Translators: 1: month, 2: day, 3: year.
-			printf( __( '%1$s %2$s, %3$s', 'custom-content-portfolio' ), $month_field, $day_field, $year_field ); ?>
+			printf( __( '%1$s %2$s, %3$s', 'theme-designer' ), $month_field, $day_field, $year_field ); ?>
 
 			<?php if ( $this->description ) : ?>
 				<br />
@@ -69,7 +69,7 @@ class THDS_Fields_Control_Date extends THDS_Fields_Control {
 
 		return sprintf(
 			'<label><span class="screen-reader-text">%s</span><input type="text" name="%s" value="%s" placeholder="%s" size="4" maxlength="4" autocomplete="off" /></label>',
-			esc_html__( 'Year', 'custom-content-portfolio' ),
+			esc_html__( 'Year', 'theme-designer' ),
 			esc_attr( $name ),
 			esc_attr( $value ),
 			esc_attr( date( 'Y' ) )
@@ -101,13 +101,13 @@ class THDS_Fields_Control_Date extends THDS_Fields_Control {
 				$monthnum,
 				selected( $monthnum, $value, false ),
 				// Translators: 1: month number (01, 02, etc.), 2: month abbreviation.
-				sprintf( esc_html__( '%1$s-%2$s', 'custom-content-portfolio' ), $monthnum, $monthtext )
+				sprintf( esc_html__( '%1$s-%2$s', 'theme-designer' ), $monthnum, $monthtext )
 			);
 		}
 
 		return sprintf(
 			'<label><span class="screen-reader-text">%s</span><select name="%s">%s</select></label>',
-			esc_html__( 'Month', 'custom-content-portfolio' ),
+			esc_html__( 'Month', 'theme-designer' ),
 			esc_attr( $name ),
 			$options
 		);
@@ -126,7 +126,7 @@ class THDS_Fields_Control_Date extends THDS_Fields_Control {
 
 		return sprintf(
 			'<label><span class="screen-reader-text">%s</span><input type="text" name="%s" value="%s" placeholder="%s" size="2" maxlength="2" autocomplete="off" /></label>',
-			esc_html__( 'Day', 'custom-content-portfolio' ),
+			esc_html__( 'Day', 'theme-designer' ),
 			esc_attr( $name ),
 			esc_attr( $value ),
 			esc_attr( date( 'd' ) )
