@@ -111,7 +111,7 @@ final class THDS_Settings_Page {
 	function validate_settings( $settings ) {
 
 		// Text boxes.
-		$settings['rewrite_base']         = $settings['rewrite_base']         ? trim( strip_tags( $settings['rewrite_base']         ), '/' ) : 'portfolio';
+		$settings['rewrite_base']         = $settings['rewrite_base']         ? trim( strip_tags( $settings['rewrite_base']         ), '/' ) : 'themes';
 		$settings['theme_rewrite_base']   = $settings['theme_rewrite_base']   ? trim( strip_tags( $settings['theme_rewrite_base']   ), '/' ) : '';
 		$settings['subject_rewrite_base'] = $settings['subject_rewrite_base'] ? trim( strip_tags( $settings['subject_rewrite_base'] ), '/' ) : '';
 		$settings['feature_rewrite_base'] = $settings['feature_rewrite_base'] ? trim( strip_tags( $settings['feature_rewrite_base'] ), '/' ) : 'features';
