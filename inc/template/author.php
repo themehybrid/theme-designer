@@ -37,7 +37,7 @@ function thds_get_single_author_title() {
 }
 
 /**
- * Returns the author portfolio archive URL.
+ * Returns the author archive URL.
  *
  * @since  1.0.0
  * @access public
