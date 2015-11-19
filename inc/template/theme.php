@@ -84,7 +84,7 @@ function thds_is_theme_archive() {
 function thds_is_parent_theme( $theme_id = 0 ) {
 
 	$theme_id  = thds_get_theme_id( $theme_id );
-	$parent_id = $theme_id ? get_post_field( 'post_parent', $theme_id ) : 0;
+	$parent_id = $theme_id ? thds_get_parent_theme_id( $theme_id ) : 0;
 
 	return apply_filters( 'thds_is_parent_theme', 0 === absint( $parent_id ), $theme_id );
 }
@@ -100,7 +100,7 @@ function thds_is_parent_theme( $theme_id = 0 ) {
 function thds_is_child_theme( $theme_id = 0 ) {
 
 	$theme_id  = thds_get_theme_id( $theme_id );
-	$parent_id = $theme_id ? get_post_field( 'post_parent', $theme_id ) : 0;
+	$parent_id = $theme_id ? thds_get_parent_theme_id( $theme_id ) : 0;
 
 	return apply_filters( 'thds_is_child_theme', absint( $parent_id ) > 0, $theme_id );
 }
@@ -325,6 +325,39 @@ function thds_get_theme_author_link( $theme_id = 0 ) {
 	$author_link  = $author_url ? sprintf( '<a class="thds-theme-author-link" href="%s">%s</a>', $author_url, $theme_author ) : '';
 
 	return apply_filters( 'thds_get_theme_author_link', $author_link, $theme_id );
+}
+
+/* ====== Parent Theme ====== */
+
+/**
+ * Returns the parent theme ID.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  int    $theme_id
+ * @return int
+ */
+function thds_get_parent_theme_id( $theme_id = 0 ) {
+	$theme_id  = thds_get_theme_id( $theme_id );
+	$parent_id = $theme_id ? get_post_field( 'post_parent', $theme_id ) : 0;
+
+	return apply_filters( 'thds_get_parent_theme_id', $parent_id, $theme_id );
+}
+
+/**
+ * Returns the parent theme `WP_POST` object if there's a parent. Else, returns `false`.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  int    $theme_id
+ * @return object|false
+ */
+function thds_get_parent_theme( $theme_id = 0 ) {
+	$theme_id  = thds_get_theme_id( $theme_id );
+	$parent_id = thds_get_parent_theme_id( $theme_id );
+	$parent    = 0 < $parent_id ? get_post( $theme_id ) : false;
+
+	return apply_filters( 'thds_get_parent_theme_id', $parent, $theme_id );
 }
 
 /* ====== Meta ====== */
