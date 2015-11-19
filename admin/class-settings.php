@@ -301,7 +301,7 @@ final class THDS_Settings_Page {
 			<select name="thds_settings[themes_order]">
 
 			<?php foreach ( $order as $option => $label ) : ?>
-				<option value="<?php echo esc_attr( $option ); ?>" <?php selected( $option, thds_get_themes_orderby() ); ?>><?php echo esc_html( $label ); ?></option>
+				<option value="<?php echo esc_attr( $option ); ?>" <?php selected( $option, thds_get_themes_order() ); ?>><?php echo esc_html( $label ); ?></option>
 			<?php endforeach; ?>
 
 			</select>
