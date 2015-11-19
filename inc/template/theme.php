@@ -86,7 +86,7 @@ function thds_is_parent_theme( $theme_id = 0 ) {
 	$theme_id  = thds_get_theme_id( $theme_id );
 	$parent_id = $theme_id ? get_post_field( 'post_parent', $theme_id ) : 0;
 
-	return apply_filters( 'thds_is_parent_theme', absint( $parent_id ) === 0, $theme_id );
+	return apply_filters( 'thds_is_parent_theme', 0 === absint( $parent_id ), $theme_id );
 }
 
 /**
