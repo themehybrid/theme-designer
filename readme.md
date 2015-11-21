@@ -6,6 +6,10 @@ Then, this plugin may be just right for you.  Theme Designer creates a system fo
 
 It's actually a project that I've been building and tweaking since I launched my own site, [Theme Hybrid](http://themehybrid.com), way back in 2008.  I use it to run the [themes section](http://themehybrid.com/themes) on the site, so it has tons of useful tools for doing just that.  It's just that I've never packaged it all up to make it useful for others.
 
+**Important Note #1:** This plugin is still in beta and probably shouldn't be used on a live site.
+
+**Important Note #2:** This plugin is only designed to work with WordPress version 4.4.
+
 ## Features
 
 **Template Tags** are the heart and soul of this plugin. There are tons of useful functions located in the `inc/template` folder that you'll want to use.  These are well documented in-code, so theme authors should be able to figure these out.
