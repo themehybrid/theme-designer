@@ -232,8 +232,8 @@ function thds_get_the_archive_description( $desc ) {
  */
 function thds_post_type_link( $post_link, $post ) {
 
-	// Bail if this isn't a portfolio theme.
-	if ( thds_get_theme_post_type() !== $post->post_type )
+	// Bail if this isn't a theme.
+	if ( ! thds_is_theme( $post->ID ) )
 		return $post_link;
 
 	$subject_taxonomy = thds_get_subject_taxonomy();
