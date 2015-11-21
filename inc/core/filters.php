@@ -82,10 +82,10 @@ function thds_template_include( $template ) {
 	// Single theme.
 	} else if ( thds_is_single_theme() ) {
 
-		$post_template = get_post_meta( get_queried_object_id(), '_wp_theme_template', true );
+		$post_template = get_post_meta( get_queried_object_id(), 'template', true );
 
 		if ( '' === $post_template )
-			$post_template = get_post_meta( get_queried_object_id(), 'template', true );
+			$post_template = get_post_meta( get_queried_object_id(), '_wp_theme_template', true );
 
 		if ( $post_template )
 			$templates[] = $post_template;
