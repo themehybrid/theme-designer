@@ -189,8 +189,8 @@ final class THDS_Plugin {
 		// Load WordPress.org integration files.
 		require_once( $this->dir_path . 'inc/wporg/class-wporg-theme.php'         );
 		require_once( $this->dir_path . 'inc/wporg/class-wporg-theme-factory.php' );
-		require_once( $this->dir_path . 'inc/wporg/functions-wporg.php'           );
-		require_once( $this->dir_path . 'inc/wporg/template-wporg.php'            );
+		require_once( $this->dir_path . 'inc/wporg/functions.php'                 );
+		require_once( $this->dir_path . 'inc/wporg/template.php'                  );
 
 		// Load admin files.
 		if ( is_admin() ) {
