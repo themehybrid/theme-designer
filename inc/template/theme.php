@@ -443,6 +443,43 @@ function thds_get_theme_download_url( $theme_id = 0 ) {
 }
 
 /**
+ * Prints the theme download link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
+function thds_theme_download_link( $args = array() ) {
+
+	echo thds_get_theme_download_link( $args );
+}
+
+/**
+ * Returns the theme download link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function thds_get_theme_download_link( $args = array() ) {
+
+	$defaults = array(
+		'theme_id' => thds_get_theme_id(),
+		'text'     => __( 'Download', 'theme-designer' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$url = thds_get_theme_download_url( $args['theme_id'] );
+
+	$link = $url ? sprintf( '<a class="thds-theme-download-link" href="%s">%s</a>', esc_url( $url ), $args['text'] ) : '';
+
+	return apply_filters( 'thds_get_theme_download_link', $link, $args );
+}
+
+/**
  * Prints the theme demo URL.
  *
  * @since  1.0.0
@@ -468,6 +505,43 @@ function thds_get_theme_demo_url( $theme_id = 0 ) {
 	$theme_id = thds_get_theme_id( $theme_id );
 
 	return apply_filters( 'thds_get_theme_demo_url', thds_get_theme_meta( $theme_id, 'demo_url' ), $theme_id );
+}
+
+/**
+ * Prints the theme demo link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
+function thds_theme_demo_link( $args = array() ) {
+
+	echo thds_get_theme_demo_link( $args );
+}
+
+/**
+ * Returns the theme demo link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function thds_get_theme_demo_link( $args = array() ) {
+
+	$defaults = array(
+		'theme_id' => thds_get_theme_id(),
+		'text'     => __( 'Demo', 'theme-designer' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$url = thds_get_theme_demo_url( $args['theme_id'] );
+
+	$link = $url ? sprintf( '<a class="thds-theme-demo-link" href="%s">%s</a>', esc_url( $url ), $args['text'] ) : '';
+
+	return apply_filters( 'thds_get_theme_demo_link', $link, $args );
 }
 
 /**
@@ -499,6 +573,43 @@ function thds_get_theme_repo_url( $theme_id = 0 ) {
 }
 
 /**
+ * Prints the theme repo link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
+function thds_theme_repo_link( $args = array() ) {
+
+	echo thds_get_theme_repo_link( $args );
+}
+
+/**
+ * Returns the theme repo link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function thds_get_theme_repo_link( $args = array() ) {
+
+	$defaults = array(
+		'theme_id' => thds_get_theme_id(),
+		'text'     => __( 'Repository', 'theme-designer' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$url = thds_get_theme_repo_url( $args['theme_id'] );
+
+	$link = $url ? sprintf( '<a class="thds-theme-repo-link" href="%s">%s</a>', esc_url( $url ), $args['text'] ) : '';
+
+	return apply_filters( 'thds_get_theme_repo_link', $link, $args );
+}
+
+/**
  * Prints the theme purchasae URL.
  *
  * @since  1.0.0
@@ -524,6 +635,43 @@ function thds_get_theme_purchase_url( $theme_id = 0 ) {
 	$theme_id = thds_get_theme_id( $theme_id );
 
 	return apply_filters( 'thds_get_theme_purchase_url', thds_get_theme_meta( $theme_id, 'purchase_url' ), $theme_id );
+}
+
+/**
+ * Prints the theme purchase link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
+function thds_theme_purchase_link( $args = array() ) {
+
+	echo thds_get_theme_purchase_link( $args );
+}
+
+/**
+ * Returns the theme purchase link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function thds_get_theme_purchase_link( $args = array() ) {
+
+	$defaults = array(
+		'theme_id' => thds_get_theme_id(),
+		'text'     => __( 'Purchase', 'theme-designer' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$url = thds_get_theme_purchase_url( $args['theme_id'] );
+
+	$link = $url ? sprintf( '<a class="thds-theme-purchase-link" href="%s">%s</a>', esc_url( $url ), $args['text'] ) : '';
+
+	return apply_filters( 'thds_get_theme_purchase_link', $link, $args );
 }
 
 /**
@@ -555,6 +703,43 @@ function thds_get_theme_support_url( $theme_id = 0 ) {
 }
 
 /**
+ * Prints the theme support link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
+function thds_theme_support_link( $args = array() ) {
+
+	echo thds_get_theme_support_link( $args );
+}
+
+/**
+ * Returns the theme support link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function thds_get_theme_support_link( $args = array() ) {
+
+	$defaults = array(
+		'theme_id' => thds_get_theme_id(),
+		'text'     => __( 'Support', 'theme-designer' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$url = thds_get_theme_support_url( $args['theme_id'] );
+
+	$link = $url ? sprintf( '<a class="thds-theme-support-link" href="%s">%s</a>', esc_url( $url ), $args['text'] ) : '';
+
+	return apply_filters( 'thds_get_theme_support_link', $link, $args );
+}
+
+/**
  * Prints the theme translation URL.
  *
  * @since  1.0.0
@@ -583,6 +768,43 @@ function thds_get_theme_translate_url( $theme_id = 0 ) {
 }
 
 /**
+ * Prints the theme translate link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
+function thds_theme_translate_link( $args = array() ) {
+
+	echo thds_get_theme_translate_link( $args );
+}
+
+/**
+ * Returns the theme translate link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function thds_get_theme_translate_link( $args = array() ) {
+
+	$defaults = array(
+		'theme_id' => thds_get_theme_id(),
+		'text'     => __( 'Translations', 'theme-designer' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$url = thds_get_theme_translate_url( $args['theme_id'] );
+
+	$link = $url ? sprintf( '<a class="thds-theme-translate-link" href="%s">%s</a>', esc_url( $url ), $args['text'] ) : '';
+
+	return apply_filters( 'thds_get_theme_translate_link', $link, $args );
+}
+
+/**
  * Prints the theme documentation URL.
  *
  * @since  1.0.0
@@ -608,6 +830,43 @@ function thds_get_theme_docs_url( $theme_id = 0 ) {
 	$theme_id = thds_get_theme_id( $theme_id );
 
 	return apply_filters( 'thds_get_theme_docs_url', thds_get_theme_meta( $theme_id, 'docs_url' ), $theme_id );
+}
+
+/**
+ * Prints the theme docs link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
+function thds_theme_docs_link( $args = array() ) {
+
+	echo thds_get_theme_docs_link( $args );
+}
+
+/**
+ * Returns the theme docs link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function thds_get_theme_docs_link( $args = array() ) {
+
+	$defaults = array(
+		'theme_id' => thds_get_theme_id(),
+		'text'     => __( 'Documentation', 'theme-designer' )
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$url = thds_get_theme_docs_url( $args['theme_id'] );
+
+	$link = $url ? sprintf( '<a class="thds-theme-docs-link" href="%s">%s</a>', esc_url( $url ), $args['text'] ) : '';
+
+	return apply_filters( 'thds_get_theme_docs_link', $link, $args );
 }
 
 /**
