@@ -177,6 +177,7 @@ final class THDS_Plugin {
 		require_once( $this->dir_path . 'inc/core/rewrite.php'    );
 		require_once( $this->dir_path . 'inc/core/post-types.php' );
 		require_once( $this->dir_path . 'inc/core/sticky.php'     );
+		require_once( $this->dir_path . 'inc/core/shortcodes.php' );
 		require_once( $this->dir_path . 'inc/core/taxonomies.php' );
 
 		// Load theme files.
