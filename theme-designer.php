@@ -214,6 +214,9 @@ final class THDS_Plugin {
 		// Internationalize the text strings used.
 		add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
 
+		// Remove update notifications for this plugin.
+		add_filter( 'site_transient_update_plugins', array( $this, 'update_notifications' ) );
+
 		// Register activation hook.
 		register_activation_hook( __FILE__, array( $this, 'activation' ) );
 	}
@@ -228,6 +231,24 @@ final class THDS_Plugin {
 	public function i18n() {
 
 		load_plugin_textdomain( 'theme-designer', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . 'languages' );
+	}
+
+	/**
+	 * Overwrites the plugin update notifications to remove this plugin.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @param  array  $notifications
+	 * @return array
+	 */
+	function update_notifications( $notifications ) {
+
+		$basename = plugin_basename( __FILE__ );
+
+		if ( isset( $notifications->response[ $basename ] ) )
+			unset( $notifications->response[ $basename ] );
+
+		return $notifications;
 	}
 
 	/**
