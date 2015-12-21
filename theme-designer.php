@@ -215,7 +215,8 @@ final class THDS_Plugin {
 		add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
 
 		// Remove update notifications for this plugin.
-		add_filter( 'site_transient_update_plugins', array( $this, 'update_notifications' ) );
+		add_filter( 'site_transient_update_plugins', array( $this, 'update_notifications' )        );
+		add_filter( 'http_request_args',             array( $this, 'http_request_args'    ), 10, 2 );
 
 		// Register activation hook.
 		register_activation_hook( __FILE__, array( $this, 'activation' ) );
@@ -241,7 +242,7 @@ final class THDS_Plugin {
 	 * @param  array  $notifications
 	 * @return array
 	 */
-	function update_notifications( $notifications ) {
+	public function update_notifications( $notifications ) {
 
 		$basename = plugin_basename( __FILE__ );
 
@@ -249,6 +250,33 @@ final class THDS_Plugin {
 			unset( $notifications->response[ $basename ] );
 
 		return $notifications;
+	}
+
+	/**
+	 * Blocks plugin from getting updated via WordPress.org if there's one with the same
+	 * name hosted there.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @param  array  $request_args
+	 * @param  array  $url
+	 * @return array
+	 */
+	public function http_request_args( $request_args, $url ) {
+
+		if ( 0 === strpos( $url, 'https://api.wordpress.org/plugins/update-check' ) ) {
+
+			$basename = plugin_basename( __FILE__ );
+			$plugins  = json_decode( $request_args['body']['plugins'], true );
+
+			if ( isset( $plugins['plugins'][ $basename ] ) ) {
+				unset( $plugins['plugins'][ $basename ] );
+
+				$request_args['body']['plugins'] = json_encode( $plugins );
+			}
+		}
+
+		return $request_args;
 	}
 
 	/**
