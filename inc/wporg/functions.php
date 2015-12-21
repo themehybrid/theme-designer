@@ -21,6 +21,7 @@ function thds_use_wporg_api_filters() {
 	add_filter( 'thds_get_theme_demo_url',       'thds_wporg_theme_demo_url_filter',       5, 2 );
 	add_filter( 'thds_get_theme_repo_url',       'thds_wporg_theme_repo_url_filter',       5, 2 );
 	add_filter( 'thds_get_theme_support_url',    'thds_wporg_theme_support_url_filter',    5, 2 );
+	add_filter( 'thds_get_theme_translate_url',  'thds_wporg_theme_translate_url_filter',  5, 2 );
 	add_filter( 'thds_get_theme_download_count', 'thds_wporg_theme_download_count_filter', 5, 2 );
 	add_filter( 'thds_get_theme_rating',         'thds_wporg_theme_rating_filter',         5, 2 );
 	add_filter( 'thds_get_theme_rating_count',   'thds_wporg_theme_rating_count_filter',   5, 2 );
