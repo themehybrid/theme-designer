@@ -1,4 +1,14 @@
 <?php
+/**
+ * Author template tags.
+ *
+ * @package    ThemeDesigner
+ * @subpackage Template
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 /**
  * Conditional tag to check if viewing a project author archive.
@@ -72,4 +82,3 @@ function thds_get_author_url( $user_id = 0 ) {
 
 	return apply_filters( 'thds_get_author_url', $url, $user_id );
 }
-

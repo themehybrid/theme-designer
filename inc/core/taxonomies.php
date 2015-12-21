@@ -1,4 +1,14 @@
 <?php
+/**
+ * Handles registering custom taxonomies and related filters.
+ *
+ * @package    ThemeDesigner
+ * @subpackage Core
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 # Register taxonomies on the 'init' hook.
 add_action( 'init', 'thds_register_taxonomies', 9 );

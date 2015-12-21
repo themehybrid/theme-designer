@@ -1,4 +1,14 @@
 <?php
+/**
+ * Sticky "themes" feature.  Works like sticky posts but for the theme archive.
+ *
+ * @package    ThemeDesigner
+ * @subpackage Core
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 # Add sticky posts to the front of the line.
 add_filter( 'the_posts', 'thds_posts_sticky_filter', 10, 2 );

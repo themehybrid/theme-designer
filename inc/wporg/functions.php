@@ -1,4 +1,14 @@
 <?php
+/**
+ * WordPress.org theme integration functions and filters.
+ *
+ * @package    ThemeDesigner
+ * @subpackage WPORG
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 # WPORG API usage.
 add_action( 'wp_loaded', 'thds_use_wporg_api_filters', 0 );

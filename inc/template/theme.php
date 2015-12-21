@@ -1,4 +1,14 @@
 <?php
+/**
+ * Theme template tags.
+ *
+ * @package    ThemeDesigner
+ * @subpackage Template
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 /**
  * Returns the theme ID (post ID).

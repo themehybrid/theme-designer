@@ -1,4 +1,14 @@
 <?php
+/**
+ * Plugin filters.
+ *
+ * @package    ThemeDesigner
+ * @subpackage Core
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 # Template hierarchy.
 add_filter( 'template_include', 'thds_template_include', 5 );

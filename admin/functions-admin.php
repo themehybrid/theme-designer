@@ -1,4 +1,14 @@
 <?php
+/**
+ * Admin functions and filters.
+ *
+ * @package    ThemeDesigner
+ * @subpackage Admin
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 # Register scripts and styles.
 add_action( 'admin_enqueue_scripts', 'thds_admin_register_scripts', 0 );

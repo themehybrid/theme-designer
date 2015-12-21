@@ -1,4 +1,14 @@
 <?php
+/**
+ * Edit/New theme admin screen.
+ *
+ * @package    ThemeDesigner
+ * @subpackage Admin
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 /**
  * Project edit screen functionality.

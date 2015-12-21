@@ -1,6 +1,13 @@
 <?php
 /**
- * Template functions for themes on WordPress.org.
+ * WordPress.org theme integration template tags.
+ *
+ * @package    ThemeDesigner
+ * @subpackage WPORG
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2015, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/theme-designer
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 /**
