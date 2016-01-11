@@ -40,7 +40,7 @@ final class THDS_Theme_Edit {
 		add_action( 'load-post-new.php', array( $this, 'load' ) );
 
 		// Add the help tabs.
-	//	add_action( 'thds_load_theme_edit', array( $this, 'add_help_tabs' ) );
+		add_action( 'thds_load_theme_edit', array( $this, 'add_help_tabs' ) );
 	}
 
 	/**
@@ -279,12 +279,39 @@ final class THDS_Theme_Edit {
 			)
 		);
 
-		// Project details help tab.
+		// Details: General help tab.
 		$screen->add_help_tab(
 			array(
-				'id'       => 'theme_details',
-				'title'    => esc_html__( 'Project Details', 'theme-designer' ),
-				'callback' => array( $this, 'help_tab_theme_details' )
+				'id'       => 'details_general',
+				'title'    => esc_html__( 'Details: General', 'theme-designer' ),
+				'callback' => array( $this, 'help_tab_details_general' )
+			)
+		);
+
+		// Details: Integration help tab.
+		$screen->add_help_tab(
+			array(
+				'id'       => 'details_integration',
+				'title'    => esc_html__( 'Details: Integration', 'theme-designer' ),
+				'callback' => array( $this, 'help_tab_details_integration' )
+			)
+		);
+
+		// Details: Links help tab.
+		$screen->add_help_tab(
+			array(
+				'id'       => 'details_links',
+				'title'    => esc_html__( 'Details: Links', 'theme-designer' ),
+				'callback' => array( $this, 'help_tab_details_links' )
+			)
+		);
+
+		// Details: Description help tab.
+		$screen->add_help_tab(
+			array(
+				'id'       => 'details_description',
+				'title'    => esc_html__( 'Details: Description', 'theme-designer' ),
+				'callback' => array( $this, 'help_tab_details_description' )
 			)
 		);
 
@@ -302,8 +329,47 @@ final class THDS_Theme_Edit {
 	public function help_tab_title_editor() { ?>
 
 		<ul>
-			<li><?php _e( "<strong>Title:</strong> Enter a title for your theme. After you enter a title, you'll see the permalink below, which you can edit.", 'theme-designer' ); ?></li>
+			<li><?php _e( "<strong>Title:</strong> Enter the name of your theme. After you enter a name, you'll see the permalink below, which you can edit.", 'theme-designer' ); ?></li>
 			<li><?php _e( '<strong>Editor:</strong> The editor allows you to add or edit content for your theme. You can insert text, media, or shortcodes.', 'theme-designer' ); ?></li>
+		</ul>
+	<?php }
+
+	/**
+	 * Displays the general details help tab.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function help_tab_details_general() { ?>
+
+		<p>
+			<?php esc_html_e( 'The general section allows you to enter the most common information about your theme.', 'theme-designer' ); ?>
+		</p>
+
+		<ul>
+			<li><?php _e( '<strong>Version:</strong> The current version number for the theme.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Download URL:</strong> The URL where the theme files can be downloaded.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Demo URL:</strong> The URL to a preview/demo of the theme.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Parent Theme:</strong> Drop-down select to choose a parent theme if the current theme is a child theme.', 'theme-designer' ); ?></li>
+		</ul>
+	<?php }
+
+	/**
+	 * Displays the integration details help tab.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function help_tab_details_integration() { ?>
+
+		<p>
+			<?php esc_html_e( 'The integration section is for integration with third-party plugins and APIs.', 'theme-designer' ); ?>
+		</p>
+
+		<ul>
+			<li><?php _e( '<strong>WordPress.org Slug:</strong> Enter the slug if your theme is hosted on WordPress.org.', 'theme-designer' ); ?></li>
 		</ul>
 	<?php }
 
@@ -314,20 +380,33 @@ final class THDS_Theme_Edit {
 	 * @access public
 	 * @return void
 	 */
-	public function help_tab_theme_details() { ?>
+	public function help_tab_details_links() { ?>
 
 		<p>
-			<?php esc_html_e( 'The Project Details meta box allows you to customize the details of your theme. All fields are optional.', 'theme-designer' ); ?>
+			<?php esc_html_e( 'The links section is for entering custom URLs associated with your theme.', 'theme-designer' ); ?>
 		</p>
 
 		<ul>
-			<li><?php _e( '<strong>URL:</strong> The URL to the Web site or page associated with the theme, such as a client Web site.', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>Client:</strong> The name of the client the theme was built for.', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>Location:</strong> A physical location where the theme took place (e.g., Highland Home, AL, USA).', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>Start Date:</strong> The date the theme began.', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>End Date:</strong> The date the theme was completed.', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>Description:</strong> A short summary of the theme. Some themes may show this on archive pages.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Repository URL:</strong> The URL to version-controlled repository for the theme (e.g., GitHub, BitBucket).', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Purchase URL:</strong> The URL where the theme can be purchased.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Support URL:</strong> The URL where users can find support, such as your support forums.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Translation URL:</strong> The URL where the theme can be translated and/or where translations can be found.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Documentation URL:</strong> The URL to the theme documentation.', 'theme-designer' ); ?></li>
 		</ul>
+	<?php }
+
+	/**
+	 * Displays the theme details help tab.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function help_tab_details_description() { ?>
+
+		<p>
+			<?php esc_html_e( 'The description section allows you to enter a custom description (i.e., excerpt) of the theme.', 'theme-designer' ); ?>
+		</p>
 	<?php }
 
 	/**
