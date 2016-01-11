@@ -236,7 +236,7 @@ function thds_theme_details_register( $manager ) {
 function thds_get_help_sidebar_text() {
 
 	// Get docs and help links.
-	$docs_link = sprintf( '<li><a href="http://themehybrid.com/docs">%s</a></li>', esc_html__( 'Documentation', 'custom-cotent-portfolio' ) );
+	$docs_link = sprintf( '<li><a href="http://themehybrid.com/docs">%s</a></li>', esc_html__( 'Documentation', 'theme-designer' ) );
 	$help_link = sprintf( '<li><a href="http://themehybrid.com/board/topics">%s</a></li>', esc_html__( 'Support Forums', 'theme-designer' ) );
 
 	// Return the text.

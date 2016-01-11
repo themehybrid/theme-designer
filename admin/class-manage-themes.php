@@ -450,7 +450,7 @@ final class THDS_Manage_Themes {
 	public function help_tab_overview() { ?>
 
 		<p>
-			<?php esc_html_e( 'This screen provides access to all of your portfolio themes. You can customize the display of this screen to suit your workflow.', 'theme-designer' ); ?>
+			<?php esc_html_e( 'This screen provides access to all of your theme projects. You can customize the display of this screen to suit your workflow.', 'theme-designer' ); ?>
 		</p>
 	<?php }
 
@@ -471,7 +471,7 @@ final class THDS_Manage_Themes {
 			<li><?php esc_html_e( 'You can hide/display columns based on your needs and decide how many themes to list per screen using the Screen Options tab.', 'theme-designer' ); ?></li>
 			<li><?php esc_html_e( 'You can filter the list of themes by post status using the text links in the upper left to show All, Published, Draft, or Trashed themes. The default view is to show all themes.', 'theme-designer' ); ?></li>
 			<li><?php esc_html_e( 'You can view themes in a simple title list or with an excerpt. Choose the view you prefer by clicking on the icons at the top of the list on the right.', 'theme-designer' ); ?></li>
-			<li><?php esc_html_e( 'You can refine the list to show only themes in a specific subject, with a specific tag, or from a specific month by using the dropdown menus above the themes list. Click the Filter button after making your selection. You also can refine the list by clicking on the theme author, subject or tag in the posts list.', 'theme-designer' ); ?></li>
+			<li><?php esc_html_e( 'You can refine the list to show only themes with a specific subject, with a specific feature, or from a specific month by using the dropdown menus above the themes list. Click the Filter button after making your selection. You also can refine the list by clicking on the theme author or subject in the posts list.', 'theme-designer' ); ?></li>
 		</ul>
 	<?php }
 
@@ -492,6 +492,7 @@ final class THDS_Manage_Themes {
 			<li><?php _e( '<strong>Edit</strong> takes you to the editing screen for that theme. You can also reach that screen by clicking on the theme title.', 'theme-designer' ); ?></li>
 			<li><?php _e( '<strong>Quick Edit</strong> provides inline access to the metadata of your theme, allowing you to update theme details without leaving this screen.', 'theme-designer' ); ?></li>
 			<li><?php _e( '<strong>Trash</strong> removes your theme from this list and places it in the trash, from which you can permanently delete it.', 'theme-designer' ); ?></li>
+			<li><?php _e( '<strong>Stick</strong> puts your theme in the list of "sticky" themes, which are shown first on the theme archive page.', 'theme-designer' ); ?></li>
 			<li><?php _e( "<strong>Preview</strong> will show you what your draft theme will look like if you publish it. View will take you to your live site to view the theme. Which link is available depends on your theme's status.", 'theme-designer' ); ?></li>
 		</ul>
 	<?php }
