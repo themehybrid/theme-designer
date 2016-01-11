@@ -128,7 +128,7 @@ function thds_is_theme_on_github( $theme_id = 0 ) {
 	$theme_id  = thds_get_theme_id( $theme_id );
 	$repo_url  = thds_get_theme_repo_url( $theme_id );
 
-	return $repo_url && false !== strpos( $repo_url, 'github.com' ) ? true : false;
+	return $repo_url && false !== strpos( $repo_url, 'github.com' );
 }
 
 /**
@@ -144,7 +144,7 @@ function thds_is_theme_on_bitbucket( $theme_id = 0 ) {
 	$theme_id  = thds_get_theme_id( $theme_id );
 	$repo_url  = thds_get_theme_repo_url( $theme_id );
 
-	return $repo_url && false !== strpos( $repo_url, 'bitbucket.com' ) ? true : false;
+	return $repo_url && false !== strpos( $repo_url, 'bitbucket.com' );
 }
 
 /* ====== Wrapper Functions ====== */
