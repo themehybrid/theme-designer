@@ -17,7 +17,7 @@ jQuery( document ).ready( function() {
 			jQuery( this ).hide();
 
 			// Open the sticky edit.
-			jQuery( '#thds-sticky-edit' ).slideToggle();
+			jQuery( '#thds-sticky-edit' ).slideToggle( 'fast' );
 		}
 	);
 
@@ -27,7 +27,7 @@ jQuery( document ).ready( function() {
 			j.preventDefault();
 
 			// Close the sticky edit.
-			jQuery( '#thds-sticky-edit' ).slideToggle();
+			jQuery( '#thds-sticky-edit' ).slideToggle( 'fast' );
 
 			// Show the hidden "Edit" link.
 			jQuery( 'a.thds-edit-sticky' ).show();
@@ -40,7 +40,7 @@ jQuery( document ).ready( function() {
 			j.preventDefault();
 
 			// Close the sticky edit.
-			jQuery( '#thds-sticky-edit' ).slideToggle();
+			jQuery( '#thds-sticky-edit' ).slideToggle( 'fast' );
 
 			// Show the hidden "Edit" link.
 			jQuery( 'a.thds-edit-sticky' ).show();
