@@ -208,7 +208,7 @@ function thds_get_setting( $setting ) {
 function thds_get_default_settings() {
 
 	$settings = array(
-		'menu_title'                 => __( 'Themes', 'theme-designer' ),
+		'menu_title'                 => __( 'Theme Designer', 'theme-designer' ),
 		'archive_title'              => __( 'Themes', 'theme-designer' ),
 		'archive_description'        => '',
 		'rewrite_base'               => 'themes',
