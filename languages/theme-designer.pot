@@ -1,0 +1,952 @@
+# Copyright (C) 2016 Theme Designer
+# This file is distributed under the same license as the Theme Designer package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Theme Designer 1.0.0-dev\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/theme-designer\n"
+"POT-Creation-Date: 2016-01-14 20:07:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: admin/class-manage-themes.php:152
+msgid "Sticky <span class=\"count\">(%s)</span>"
+msgid_plural "Sticky <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-manage-themes.php:226 inc/core/post-types.php:84
+#: inc/core/post-types.php:86
+msgid "Theme"
+msgstr ""
+
+#: admin/class-manage-themes.php:230 inc/core/post-types.php:96
+msgid "Screenshot"
+msgstr ""
+
+#: admin/class-manage-themes.php:237
+msgid "Downloads"
+msgstr ""
+
+#: admin/class-manage-themes.php:238
+msgid "Rating"
+msgstr ""
+
+#: admin/class-manage-themes.php:323 admin/class-theme-edit.php:141
+#: admin/functions-admin.php:35
+msgid "Sticky"
+msgstr ""
+
+#: admin/class-manage-themes.php:348
+msgid "Unstick"
+msgstr ""
+
+#: admin/class-manage-themes.php:348
+msgid "Stick"
+msgstr ""
+
+#: admin/class-manage-themes.php:416
+msgid "Overview"
+msgstr ""
+
+#: admin/class-manage-themes.php:425
+msgid "Screen Content"
+msgstr ""
+
+#: admin/class-manage-themes.php:434
+msgid "Available Actions"
+msgstr ""
+
+#: admin/class-manage-themes.php:453
+msgid "This screen provides access to all of your theme projects. You can customize the display of this screen to suit your workflow."
+msgstr ""
+
+#: admin/class-manage-themes.php:467
+msgid "You can customize the display of this screen's contents in a number of ways:"
+msgstr ""
+
+#: admin/class-manage-themes.php:471
+msgid "You can hide/display columns based on your needs and decide how many themes to list per screen using the Screen Options tab."
+msgstr ""
+
+#: admin/class-manage-themes.php:472
+msgid "You can filter the list of themes by post status using the text links in the upper left to show All, Published, Draft, or Trashed themes. The default view is to show all themes."
+msgstr ""
+
+#: admin/class-manage-themes.php:473
+msgid "You can view themes in a simple title list or with an excerpt. Choose the view you prefer by clicking on the icons at the top of the list on the right."
+msgstr ""
+
+#: admin/class-manage-themes.php:474
+msgid "You can refine the list to show only themes with a specific subject, with a specific feature, or from a specific month by using the dropdown menus above the themes list. Click the Filter button after making your selection. You also can refine the list by clicking on the theme author or subject in the posts list."
+msgstr ""
+
+#: admin/class-manage-themes.php:488
+msgid "Hovering over a row in the themes list will display action links that allow you to manage your theme. You can perform the following actions:"
+msgstr ""
+
+#: admin/class-manage-themes.php:492
+msgid "<strong>Edit</strong> takes you to the editing screen for that theme. You can also reach that screen by clicking on the theme title."
+msgstr ""
+
+#: admin/class-manage-themes.php:493
+msgid "<strong>Quick Edit</strong> provides inline access to the metadata of your theme, allowing you to update theme details without leaving this screen."
+msgstr ""
+
+#: admin/class-manage-themes.php:494
+msgid "<strong>Trash</strong> removes your theme from this list and places it in the trash, from which you can permanently delete it."
+msgstr ""
+
+#: admin/class-manage-themes.php:495
+msgid "<strong>Stick</strong> puts your theme in the list of \"sticky\" themes, which are shown first on the theme archive page."
+msgstr ""
+
+#: admin/class-manage-themes.php:496
+msgid "<strong>Preview</strong> will show you what your draft theme will look like if you publish it. View will take you to your live site to view the theme. Which link is available depends on your theme's status."
+msgstr ""
+
+#: admin/class-settings.php:53 admin/class-settings.php:469
+msgid "Theme Designer Settings"
+msgstr ""
+
+#: admin/class-settings.php:54
+msgid "Settings"
+msgstr ""
+
+#: admin/class-settings.php:84 admin/functions-admin.php:70
+msgid "General"
+msgstr ""
+
+#: admin/class-settings.php:85
+msgid "Reading"
+msgstr ""
+
+#: admin/class-settings.php:86 admin/functions-admin.php:78
+msgid "Integration"
+msgstr ""
+
+#: admin/class-settings.php:87 admin/class-settings.php:507
+msgid "Permalinks"
+msgstr ""
+
+#: admin/class-settings.php:92
+msgid "Menu Title"
+msgstr ""
+
+#: admin/class-settings.php:93
+msgid "Archive Title"
+msgstr ""
+
+#: admin/class-settings.php:94
+msgid "Archive Description"
+msgstr ""
+
+#: admin/class-settings.php:97
+msgid "Themes Per Page"
+msgstr ""
+
+#: admin/class-settings.php:98
+msgid "Sort By"
+msgstr ""
+
+#: admin/class-settings.php:99
+msgid "Order"
+msgstr ""
+
+#: admin/class-settings.php:102
+msgid "WordPress.org"
+msgstr ""
+
+#: admin/class-settings.php:103
+msgid "WordPress.org Transient"
+msgstr ""
+
+#: admin/class-settings.php:106
+msgid "Rewrite Base"
+msgstr ""
+
+#: admin/class-settings.php:107
+msgid "Theme Slug"
+msgstr ""
+
+#: admin/class-settings.php:108
+msgid "Subject Slug"
+msgstr ""
+
+#: admin/class-settings.php:109
+msgid "Feature Slug"
+msgstr ""
+
+#: admin/class-settings.php:110
+msgid "Author Slug"
+msgstr ""
+
+#: admin/class-settings.php:130 admin/class-settings.php:131
+#: inc/core/options.php:212 inc/core/post-types.php:83
+#: inc/core/post-types.php:95
+msgid "Themes"
+msgstr ""
+
+#: admin/class-settings.php:178
+msgid "General settings for the themes section of your site."
+msgstr ""
+
+#: admin/class-settings.php:194
+msgid "The title for the themes admin menu."
+msgstr ""
+
+#: admin/class-settings.php:210
+msgid "The title used for theme archive."
+msgstr ""
+
+#: admin/class-settings.php:234
+msgid "Your theme archive description. This may or may not be shown by your theme."
+msgstr ""
+
+#: admin/class-settings.php:248
+msgid "Reading settings for the front end of your site."
+msgstr ""
+
+#: admin/class-settings.php:276
+msgid "Author"
+msgstr ""
+
+#: admin/class-settings.php:277
+msgid "Date (Published)"
+msgstr ""
+
+#: admin/class-settings.php:278
+msgid "Date (Modified)"
+msgstr ""
+
+#: admin/class-settings.php:279
+msgid "ID"
+msgstr ""
+
+#: admin/class-settings.php:280
+msgid "Random"
+msgstr ""
+
+#: admin/class-settings.php:281
+msgid "Slug"
+msgstr ""
+
+#: admin/class-settings.php:282
+msgid "Title"
+msgstr ""
+
+#: admin/class-settings.php:306
+msgid "Ascending"
+msgstr ""
+
+#: admin/class-settings.php:307
+msgid "Descending"
+msgstr ""
+
+#: admin/class-settings.php:331
+msgid "Integrate your themes with third-party sites."
+msgstr ""
+
+#: admin/class-settings.php:346
+msgid "Use the WordPress.org themes API?"
+msgstr ""
+
+#: admin/class-settings.php:362
+msgid "How often (in days) to update theme data from the WordPress.org API."
+msgstr ""
+
+#: admin/class-settings.php:376
+msgid "Set up custom permalinks for the themes section on your site."
+msgstr ""
+
+#: admin/class-settings.php:476
+msgid "Update Settings"
+msgstr ""
+
+#: admin/class-settings.php:498
+msgid "General Settings"
+msgstr ""
+
+#: admin/class-settings.php:526
+msgid "<strong>Title:</strong> Allows you to set the title for the portfolio section on your site. This is general shown on the portfolio themes archive, but themes and other plugins may use it in other ways."
+msgstr ""
+
+#: admin/class-settings.php:527
+msgid "<strong>Description:</strong> This is the description for your portfolio. Some themes may display this on the portfolio themes archive."
+msgstr ""
+
+#: admin/class-settings.php:541
+msgid "<strong>Portfolio Base:</strong> The primary URL for the portfolio section on your site. It lists your portfolio themes."
+msgstr ""
+
+#: admin/class-settings.php:543
+msgid "<strong>Project Slug:</strong> The slug for single portfolio themes. You can use something custom, leave this field empty, or use one of the following tags:"
+msgstr ""
+
+#: admin/class-settings.php:545
+msgid "%s - The theme author name."
+msgstr ""
+
+#: admin/class-settings.php:546
+msgid "%s - The theme subject."
+msgstr ""
+
+#: admin/class-settings.php:547
+msgid "%s - The theme tag."
+msgstr ""
+
+#: admin/class-settings.php:550
+msgid "<strong>Category Slug:</strong> The base slug used for portfolio subject archives."
+msgstr ""
+
+#: admin/class-settings.php:551
+msgid "<strong>Tag Slug:</strong> The base slug used for portfolio tag archives."
+msgstr ""
+
+#: admin/class-settings.php:552
+msgid "<strong>Author Slug:</strong> The base slug used for portfolio author archives."
+msgstr ""
+
+#: admin/class-theme-edit.php:141 admin/functions-admin.php:36
+msgid "Not Sticky"
+msgstr ""
+
+#: admin/class-theme-edit.php:148
+msgid "Sticky: %s"
+msgstr ""
+
+#: admin/class-theme-edit.php:152
+msgid "Edit"
+msgstr ""
+
+#: admin/class-theme-edit.php:152
+msgid "Edit sticky status"
+msgstr ""
+
+#: admin/class-theme-edit.php:157
+msgid "Stick to the theme archive"
+msgstr ""
+
+#: admin/class-theme-edit.php:159
+msgid "OK"
+msgstr ""
+
+#: admin/class-theme-edit.php:160
+msgid "Cancel"
+msgstr ""
+
+#: admin/class-theme-edit.php:180
+msgid "Details: %s"
+msgstr ""
+
+#: admin/class-theme-edit.php:277
+msgid "Title and Editor"
+msgstr ""
+
+#: admin/class-theme-edit.php:286
+msgid "Details: General"
+msgstr ""
+
+#: admin/class-theme-edit.php:295
+msgid "Details: Integration"
+msgstr ""
+
+#: admin/class-theme-edit.php:304
+msgid "Details: Links"
+msgstr ""
+
+#: admin/class-theme-edit.php:313
+msgid "Details: Description"
+msgstr ""
+
+#: admin/class-theme-edit.php:332
+msgid "<strong>Title:</strong> Enter the name of your theme. After you enter a name, you'll see the permalink below, which you can edit."
+msgstr ""
+
+#: admin/class-theme-edit.php:333
+msgid "<strong>Editor:</strong> The editor allows you to add or edit content for your theme. You can insert text, media, or shortcodes."
+msgstr ""
+
+#: admin/class-theme-edit.php:347
+msgid "The general section allows you to enter the most common information about your theme."
+msgstr ""
+
+#: admin/class-theme-edit.php:351
+msgid "<strong>Version:</strong> The current version number for the theme."
+msgstr ""
+
+#: admin/class-theme-edit.php:352
+msgid "<strong>Download URL:</strong> The URL where the theme files can be downloaded."
+msgstr ""
+
+#: admin/class-theme-edit.php:353
+msgid "<strong>Demo URL:</strong> The URL to a preview/demo of the theme."
+msgstr ""
+
+#: admin/class-theme-edit.php:354
+msgid "<strong>Parent Theme:</strong> Drop-down select to choose a parent theme if the current theme is a child theme."
+msgstr ""
+
+#: admin/class-theme-edit.php:368
+msgid "The integration section is for integration with third-party plugins and APIs."
+msgstr ""
+
+#: admin/class-theme-edit.php:372
+msgid "<strong>WordPress.org Slug:</strong> Enter the slug if your theme is hosted on WordPress.org."
+msgstr ""
+
+#: admin/class-theme-edit.php:386
+msgid "The links section is for entering custom URLs associated with your theme."
+msgstr ""
+
+#: admin/class-theme-edit.php:390
+msgid "<strong>Repository URL:</strong> The URL to version-controlled repository for the theme (e.g., GitHub, BitBucket)."
+msgstr ""
+
+#: admin/class-theme-edit.php:391
+msgid "<strong>Purchase URL:</strong> The URL where the theme can be purchased."
+msgstr ""
+
+#: admin/class-theme-edit.php:392
+msgid "<strong>Support URL:</strong> The URL where users can find support, such as your support forums."
+msgstr ""
+
+#: admin/class-theme-edit.php:393
+msgid "<strong>Translation URL:</strong> The URL where the theme can be translated and/or where translations can be found."
+msgstr ""
+
+#: admin/class-theme-edit.php:394
+msgid "<strong>Documentation URL:</strong> The URL to the theme documentation."
+msgstr ""
+
+#: admin/class-theme-edit.php:408
+msgid "The description section allows you to enter a custom description (i.e., excerpt) of the theme."
+msgstr ""
+
+#. Translators: 1: month, 2: day, 3: year.
+
+#: admin/fields-manager/class-control-date.php:50
+msgid "%1$s %2$s, %3$s"
+msgstr ""
+
+#: admin/fields-manager/class-control-date.php:72
+msgid "Year"
+msgstr ""
+
+#. Translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+
+#: admin/fields-manager/class-control-date.php:104
+msgid "%1$s-%2$s"
+msgstr ""
+
+#: admin/fields-manager/class-control-date.php:110
+msgid "Month"
+msgstr ""
+
+#: admin/fields-manager/class-control-date.php:129
+msgid "Day"
+msgstr ""
+
+#: admin/functions-admin.php:86
+msgid "Links"
+msgstr ""
+
+#: admin/functions-admin.php:94 admin/functions-admin.php:188
+msgid "Description"
+msgstr ""
+
+#: admin/functions-admin.php:104
+msgid "Version"
+msgstr ""
+
+#: admin/functions-admin.php:105
+msgid "The current version of the theme."
+msgstr ""
+
+#: admin/functions-admin.php:111
+msgid "Download URL"
+msgstr ""
+
+#: admin/functions-admin.php:112
+msgid "URL to ZIP or other type of file to download."
+msgstr ""
+
+#: admin/functions-admin.php:118
+msgid "Demo URL"
+msgstr ""
+
+#: admin/functions-admin.php:119
+msgid "Theme demo/preview URL."
+msgstr ""
+
+#: admin/functions-admin.php:124
+msgid "Parent Theme"
+msgstr ""
+
+#: admin/functions-admin.php:125
+msgid "The parent theme if this is a child theme."
+msgstr ""
+
+#: admin/functions-admin.php:131
+msgid "Repository URL"
+msgstr ""
+
+#: admin/functions-admin.php:132
+msgid "URL to the code repository."
+msgstr ""
+
+#: admin/functions-admin.php:138
+msgid "Purchase URL"
+msgstr ""
+
+#: admin/functions-admin.php:139
+msgid "URL to where the theme can be purchased."
+msgstr ""
+
+#: admin/functions-admin.php:145
+msgid "Support URL"
+msgstr ""
+
+#: admin/functions-admin.php:146
+msgid "Theme support or forum URL."
+msgstr ""
+
+#: admin/functions-admin.php:152
+msgid "Documentation URL"
+msgstr ""
+
+#: admin/functions-admin.php:153
+msgid "URL to the theme documentation."
+msgstr ""
+
+#: admin/functions-admin.php:159
+msgid "Translation URL"
+msgstr ""
+
+#: admin/functions-admin.php:160
+msgid "URL to the theme translations."
+msgstr ""
+
+#: admin/functions-admin.php:166
+msgid "WordPress.org Slug"
+msgstr ""
+
+#: admin/functions-admin.php:167
+msgid "Slug (not URL) of the theme on the WordPress.org theme directory."
+msgstr ""
+
+#: admin/functions-admin.php:173
+msgid "GitHub Slug"
+msgstr ""
+
+#: admin/functions-admin.php:174
+msgid "Username and slug of repository on GitHub (e.g., username/repository)."
+msgstr ""
+
+#: admin/functions-admin.php:180
+msgid "EDD Download ID"
+msgstr ""
+
+#: admin/functions-admin.php:181
+msgid "Download ID from Easy Digital Downloads."
+msgstr ""
+
+#: admin/functions-admin.php:189
+msgid "Write a short description (excerpt) of the theme."
+msgstr ""
+
+#: admin/functions-admin.php:239 inc/template/theme.php:902
+msgid "Documentation"
+msgstr ""
+
+#: admin/functions-admin.php:240
+msgid "Support Forums"
+msgstr ""
+
+#: admin/functions-admin.php:245
+msgid "For more information:"
+msgstr ""
+
+#: inc/core/options.php:211
+msgid "Theme Designer"
+msgstr ""
+
+#: inc/core/post-types.php:87 inc/core/post-types.php:90
+msgid "New Theme"
+msgstr ""
+
+#: inc/core/post-types.php:88
+msgid "Add New Theme"
+msgstr ""
+
+#: inc/core/post-types.php:89
+msgid "Edit Theme"
+msgstr ""
+
+#: inc/core/post-types.php:91
+msgid "View Theme"
+msgstr ""
+
+#: inc/core/post-types.php:92
+msgid "Search Themes"
+msgstr ""
+
+#: inc/core/post-types.php:93
+msgid "No themes found"
+msgstr ""
+
+#: inc/core/post-types.php:94
+msgid "No themes found in trash"
+msgstr ""
+
+#: inc/core/post-types.php:97
+msgid "Set screenshot"
+msgstr ""
+
+#: inc/core/post-types.php:98
+msgid "Remove screenshot"
+msgstr ""
+
+#: inc/core/post-types.php:99
+msgid "Use as screenshot"
+msgstr ""
+
+#: inc/core/post-types.php:100
+msgid "Insert into content"
+msgstr ""
+
+#: inc/core/post-types.php:101
+msgid "Uploaded to this theme"
+msgstr ""
+
+#: inc/core/post-types.php:102
+msgid "Filter themes list"
+msgstr ""
+
+#: inc/core/post-types.php:103
+msgid "Themes list navigation"
+msgstr ""
+
+#: inc/core/post-types.php:104
+msgid "Themes list"
+msgstr ""
+
+#: inc/core/post-types.php:182
+msgid "Enter theme name"
+msgstr ""
+
+#. Translators: Scheduled theme date format. See http:php.net/date
+
+#: inc/core/post-types.php:208
+msgid "M j, Y @ H:i"
+msgstr ""
+
+#: inc/core/post-types.php:211 inc/core/post-types.php:212
+msgid "Preview theme"
+msgstr ""
+
+#: inc/core/post-types.php:213
+msgid "View theme"
+msgstr ""
+
+#: inc/core/post-types.php:217 inc/core/post-types.php:218
+msgid "Theme updated."
+msgstr ""
+
+#. Translators: %s is the date and time of the revision.
+
+#: inc/core/post-types.php:220
+msgid "Theme restored to revision from %s."
+msgstr ""
+
+#: inc/core/post-types.php:221
+msgid "Theme published."
+msgstr ""
+
+#: inc/core/post-types.php:222
+msgid "Theme saved."
+msgstr ""
+
+#: inc/core/post-types.php:223
+msgid "Theme submitted."
+msgstr ""
+
+#: inc/core/post-types.php:224
+msgid "Theme scheduled for: %s."
+msgstr ""
+
+#: inc/core/post-types.php:225
+msgid "Theme draft updated."
+msgstr ""
+
+#: inc/core/post-types.php:244
+msgid "%s theme updated."
+msgid_plural "%s themes updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/core/post-types.php:245
+msgid "%s theme not updated, somebody is editing it."
+msgid_plural "%s themes not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/core/post-types.php:246
+msgid "%s theme permanently deleted."
+msgid_plural "%s themes permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/core/post-types.php:247
+msgid "%s theme moved to the Trash."
+msgid_plural "%s themes moved to the trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/core/post-types.php:248
+msgid "%s theme restored from the Trash."
+msgid_plural "%s themes restored from the trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/core/shortcodes.php:120 inc/template/theme.php:512
+msgid "Download"
+msgstr ""
+
+#: inc/core/shortcodes.php:140 inc/template/theme.php:577
+msgid "Demo"
+msgstr ""
+
+#: inc/core/shortcodes.php:160 inc/template/theme.php:642
+msgid "Repository"
+msgstr ""
+
+#: inc/core/shortcodes.php:180 inc/template/theme.php:707
+msgid "Purchase"
+msgstr ""
+
+#: inc/core/shortcodes.php:200 inc/template/theme.php:772
+msgid "Support"
+msgstr ""
+
+#: inc/core/shortcodes.php:220 inc/template/theme.php:837
+msgid "Translations"
+msgstr ""
+
+#: inc/core/shortcodes.php:240
+msgid "Docs"
+msgstr ""
+
+#: inc/core/taxonomies.php:91 inc/core/taxonomies.php:93
+msgid "Subjects"
+msgstr ""
+
+#: inc/core/taxonomies.php:92 inc/core/taxonomies.php:94
+msgid "Subject"
+msgstr ""
+
+#: inc/core/taxonomies.php:95
+msgid "Search Subjects"
+msgstr ""
+
+#: inc/core/taxonomies.php:96
+msgid "Popular Subjects"
+msgstr ""
+
+#: inc/core/taxonomies.php:97
+msgid "All Subjects"
+msgstr ""
+
+#: inc/core/taxonomies.php:98
+msgid "Edit Subject"
+msgstr ""
+
+#: inc/core/taxonomies.php:99
+msgid "View Subject"
+msgstr ""
+
+#: inc/core/taxonomies.php:100
+msgid "Update Subject"
+msgstr ""
+
+#: inc/core/taxonomies.php:101
+msgid "Add New Subject"
+msgstr ""
+
+#: inc/core/taxonomies.php:102
+msgid "New Subject Name"
+msgstr ""
+
+#: inc/core/taxonomies.php:103
+msgid "No subjects found."
+msgstr ""
+
+#: inc/core/taxonomies.php:104
+msgid "No subjects"
+msgstr ""
+
+#: inc/core/taxonomies.php:105
+msgid "Subjects list navigation"
+msgstr ""
+
+#: inc/core/taxonomies.php:106
+msgid "Subjects list"
+msgstr ""
+
+#: inc/core/taxonomies.php:109
+msgid "Select Subject"
+msgstr ""
+
+#: inc/core/taxonomies.php:110
+msgid "Parent Subject"
+msgstr ""
+
+#: inc/core/taxonomies.php:111
+msgid "Parent Subject:"
+msgstr ""
+
+#: inc/core/taxonomies.php:127 inc/core/taxonomies.php:129
+msgid "Features"
+msgstr ""
+
+#: inc/core/taxonomies.php:128 inc/core/taxonomies.php:130
+msgid "Feature"
+msgstr ""
+
+#: inc/core/taxonomies.php:131
+msgid "Search Features"
+msgstr ""
+
+#: inc/core/taxonomies.php:132
+msgid "Popular Features"
+msgstr ""
+
+#: inc/core/taxonomies.php:133
+msgid "All Features"
+msgstr ""
+
+#: inc/core/taxonomies.php:134
+msgid "Edit Feature"
+msgstr ""
+
+#: inc/core/taxonomies.php:135
+msgid "View Feature"
+msgstr ""
+
+#: inc/core/taxonomies.php:136
+msgid "Update Feature"
+msgstr ""
+
+#: inc/core/taxonomies.php:137
+msgid "Add New Feature"
+msgstr ""
+
+#: inc/core/taxonomies.php:138
+msgid "New Feature Name"
+msgstr ""
+
+#: inc/core/taxonomies.php:139
+msgid "No features found."
+msgstr ""
+
+#: inc/core/taxonomies.php:140
+msgid "No features"
+msgstr ""
+
+#: inc/core/taxonomies.php:141
+msgid "Features list navigation"
+msgstr ""
+
+#: inc/core/taxonomies.php:142
+msgid "Features list"
+msgstr ""
+
+#: inc/core/taxonomies.php:145
+msgid "Separate features with commas"
+msgstr ""
+
+#: inc/core/taxonomies.php:146
+msgid "Add or remove features"
+msgstr ""
+
+#: inc/core/taxonomies.php:147
+msgid "Choose from the most used features"
+msgstr ""
+
+#: inc/core/taxonomies.php:225
+msgid "Subject added."
+msgstr ""
+
+#: inc/core/taxonomies.php:226
+msgid "Subject deleted."
+msgstr ""
+
+#: inc/core/taxonomies.php:227
+msgid "Subject updated."
+msgstr ""
+
+#: inc/core/taxonomies.php:228
+msgid "Subject not added."
+msgstr ""
+
+#: inc/core/taxonomies.php:229
+msgid "Subject not updated."
+msgstr ""
+
+#: inc/core/taxonomies.php:230
+msgid "Subjects deleted."
+msgstr ""
+
+#: inc/core/taxonomies.php:236
+msgid "Feature added."
+msgstr ""
+
+#: inc/core/taxonomies.php:237
+msgid "Feature deleted."
+msgstr ""
+
+#: inc/core/taxonomies.php:238
+msgid "Feature updated."
+msgstr ""
+
+#: inc/core/taxonomies.php:239
+msgid "Feature not added."
+msgstr ""
+
+#: inc/core/taxonomies.php:240
+msgid "Feature not updated."
+msgstr ""
+
+#: inc/core/taxonomies.php:241
+msgid "Features deleted."
+msgstr ""
+
+#: theme-designer.php:121 theme-designer.php:132
+msgid "Whoah, partner!"
+msgstr ""
+
+#: theme-designer.php:143
+msgid "Method does not exist."
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "Theme Designer"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://themehybrid.com/plugins/theme-designer"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A plugin for theme authors to manage their theme portfolios."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Justin Tadlock"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://themehybrid.com"
+msgstr ""
