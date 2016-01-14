@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Theme Designer
  * Plugin URI:  http://themehybrid.com/plugins/theme-designer
- * Description: Awesomesauce.
+ * Description: A plugin for theme authors to manage their theme portfolios.
  * Version:     1.0.0-dev
  * Author:      Justin Tadlock
  * Author URI:  http://themehybrid.com
