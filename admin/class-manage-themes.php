@@ -102,6 +102,11 @@ final class THDS_Manage_Themes {
 			$query->set( 'orderby',  'meta_value_num' );
 			$query->set( 'meta_key', 'download_count' );
 
+		} else if ( isset( $_GET['orderby'] ) && 'install_count' === $_GET['orderby'] ) {
+
+			$query->set( 'orderby',  'meta_value_num' );
+			$query->set( 'meta_key', 'install_count'  );
+
 		} else if ( isset( $_GET['orderby'] ) && 'rating' === $_GET['orderby'] ) {
 
 			$query->set( 'orderby',  'meta_value_num' );
@@ -127,10 +132,11 @@ final class THDS_Manage_Themes {
 
 		<style type="text/css">@media only screen and (min-width: 783px) {
 			.fixed .column-screenshot,
-			.fixed .column-downloads,
-			.fixed .column-rating { width: 115px; }
+			.fixed .column-downloads { width: 110px; }
+			.fixed .column-rating { width: 120px; }
+			.fixed .column-installs { width: 100px; }
 			.fixed .column-taxonomy-<?php echo esc_attr( thds_get_subject_taxonomy() ); ?>,
-			.fixed .column-taxonomy-<?php echo esc_attr( thds_get_feature_taxonomy() ); ?> { width: 15%; }
+			.fixed .column-taxonomy-<?php echo esc_attr( thds_get_feature_taxonomy() ); ?> { width: 115px; }
 		}</style>
 	<?php }
 
@@ -235,6 +241,7 @@ final class THDS_Manage_Themes {
 
 		if ( thds_use_wporg_api() ) {
 			$columns['downloads'] = __( 'Downloads', 'theme-designer' );
+			$columns['installs']  = __( 'Installs',  'theme-designer' );
 			$columns['rating']    = __( 'Rating',    'theme-designer' );
 		}
 
@@ -267,9 +274,11 @@ final class THDS_Manage_Themes {
 
 			$d_order = 'download_count' === $meta_key && 'desc' === $order ? false : true;
 			$r_order = 'rating'         === $meta_key && 'desc' === $order ? false : true;
+			$i_order = 'installs'       === $meta_key && 'desc' === $order ? false : true;
 
 			$columns['downloads'] = array( 'download_count', $d_order );
 			$columns['rating']    = array( 'rating',         $r_order );
+			$columns['installs']  = array( 'install_count',  $i_order );
 		}
 
 		return $columns;
@@ -291,14 +300,20 @@ final class THDS_Manage_Themes {
 			if ( has_post_thumbnail() )
 				the_post_thumbnail( array( 75, 75 ) );
 
-			elseif ( function_exists( 'get_the_image' ) )
+			else if ( function_exists( 'get_the_image' ) )
 				get_the_image( array( 'scan' => true, 'width' => 75, 'link' => false ) );
 
 		} else if ( 'downloads' === $column ) {
 
 			$count = thds_get_theme_download_count( $post_id );
 
-			echo $count ? number_format_i18n( $count ) : '&ndash;';
+			$count ? thds_theme_download_count( $post_id ) : print( '&ndash;' );
+
+		} else if ( 'installs' === $column ) {
+
+			$count = thds_get_wporg_theme_active_installs( $post_id );
+
+			$count ? thds_theme_install_count( $post_id ) : print( '&ndash;' );
 
 		} else if ( 'rating' === $column ) {
 

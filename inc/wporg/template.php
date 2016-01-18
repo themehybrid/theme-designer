@@ -462,6 +462,32 @@ function thds_get_wporg_theme_downloaded( $theme_id = 0 ) {
 }
 
 /**
+ * Prints the theme install count.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  int     $theme_id
+ * @return void
+ */
+function thds_wporg_theme_active_installs( $theme_id = 0 ) {
+
+	echo number_format_i18n( thds_get_wporg_theme_active_installs( $theme_id ) );
+}
+
+/**
+ * Returns the theme install count.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  int     $theme_id
+ * @return int
+ */
+function thds_get_wporg_theme_active_installs( $theme_id = 0 ) {
+
+	return thds_get_wporg_theme_property( $theme_id, 'active_installs' );
+}
+
+/**
  * Prints the theme's last updated date.
  *
  * @since  1.0.0

@@ -122,8 +122,28 @@ class THDS_WPORG_Theme {
 			// Make sure the function exists.
 			if ( function_exists( 'themes_api' ) ) {
 
+				$fields = array(
+					'description'     => true,
+					'sections'        => true,
+					'rating'          => true,
+					'ratings'         => false,
+					'downloaded'      => true,
+					'downloadlink'    => true,
+					'last_updated'    => true,
+					'homepage'        => true,
+					'tags'            => true,
+					'template'        => true,
+					'parent'          => true,
+					'versions'        => false,
+					'screenshot_url'  => true,
+					'active_installs' => true
+				);
+
+				// @link https://codex.wordpress.org/WordPress.org_API#Theme_Information
+				$fields = apply_filters( 'thds_wporg_themes_api_fields', $fields, $theme_id, $slug );
+
 				// Get the theme info from WordPress.org.
-				$api = themes_api( 'theme_information', array( 'slug' => $slug ) );
+				$api = themes_api( 'theme_information', array( 'slug' => $slug, 'fields' => $fields ) );
 
 				// If no error, let's roll.
 				if ( ! is_wp_error( $api ) ) {
@@ -141,6 +161,10 @@ class THDS_WPORG_Theme {
 						// Back up download count as post meta.
 						if ( isset( $api->downloaded ) )
 							thds_set_theme_meta( $theme_id, 'download_count', absint( $api->downloaded ) );
+
+						// Back up install count as post meta.
+						if ( isset( $api->active_installs ) )
+							thds_set_theme_meta( $theme_id, 'install_count', absint( $api->active_installs ) );
 
 						// Back up ratings as post meta.
 						if ( isset( $api->rating ) && isset( $api->num_ratings ) ) {

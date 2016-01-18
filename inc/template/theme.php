@@ -949,7 +949,7 @@ function thds_get_theme_wporg_slug( $theme_id = 0 ) {
  */
 function thds_theme_download_count( $theme_id = 0 ) {
 
-	echo number_format_i8n( absint( thds_get_theme_download_count( $theme_id ) ) );
+	echo number_format_i18n( absint( thds_get_theme_download_count( $theme_id ) ) );
 }
 
 /**
@@ -965,6 +965,35 @@ function thds_get_theme_download_count( $theme_id = 0 ) {
 	$theme_id = thds_get_theme_id( $theme_id );
 
 	return apply_filters( 'thds_get_theme_download_count', absint( thds_get_theme_meta( $theme_id, 'download_count' ) ), $theme_id );
+}
+
+/**
+ * Prints the theme install count.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  int     $theme_id
+ * @return void
+ */
+function thds_theme_install_count( $theme_id = 0 ) {
+
+	// Translators: Approximate count. The %s is a number.  The + means "more than."
+	echo sprintf( __( '%s+', 'theme-designer' ), number_format_i18n( absint( thds_get_theme_install_count( $theme_id ) ) ) );
+}
+
+/**
+ * Returns the theme install count.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  int     $theme_id
+ * @return int
+ */
+function thds_get_theme_install_count( $theme_id = 0 ) {
+
+	$theme_id = thds_get_theme_id( $theme_id );
+
+	return apply_filters( 'thds_get_theme_install_count', absint( thds_get_theme_meta( $theme_id, 'install_count' ) ), $theme_id );
 }
 
 /**

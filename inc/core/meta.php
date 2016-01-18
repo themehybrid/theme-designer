@@ -36,11 +36,10 @@ function thds_register_meta() {
 	register_meta( 'post', 'sample_child_theme', 'absint', '__return_false' );
 
 	// Other data.
-	register_meta( 'post', 'wporg_slug',      'sanitize_title_with_dashes', '__return_false' );
-	//register_meta( 'post', 'github_slug',     'strip_tags',                 '__return_false' );
-	register_meta( 'post', 'version',         'wp_filter_no_html_kses',                     '__return_false' );
-	register_meta( 'post', 'download_count',  'absint',                     '__return_false' );
-	//register_meta( 'post', 'edd_download_id', 'absint',                     '__return_false' );
+	register_meta( 'post', 'wporg_slug',     'sanitize_title_with_dashes', '__return_false' );
+	register_meta( 'post', 'version',        'wp_filter_no_html_kses',     '__return_false' );
+	register_meta( 'post', 'download_count', 'absint',                     '__return_false' );
+	register_meta( 'post', 'install_count',  'absint',                     '__return_false' );
 }
 
 /**

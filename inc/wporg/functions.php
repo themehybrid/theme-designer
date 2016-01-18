@@ -33,6 +33,7 @@ function thds_use_wporg_api_filters() {
 	add_filter( 'thds_get_theme_support_url',    'thds_wporg_theme_support_url_filter',    5, 2 );
 	add_filter( 'thds_get_theme_translate_url',  'thds_wporg_theme_translate_url_filter',  5, 2 );
 	add_filter( 'thds_get_theme_download_count', 'thds_wporg_theme_download_count_filter', 5, 2 );
+	add_filter( 'thds_get_theme_install_count',  'thds_wporg_theme_install_count_filter',  5, 2 );
 	add_filter( 'thds_get_theme_rating',         'thds_wporg_theme_rating_filter',         5, 2 );
 	add_filter( 'thds_get_theme_rating_count',   'thds_wporg_theme_rating_count_filter',   5, 2 );
 }
@@ -200,6 +201,20 @@ function thds_wporg_theme_support_url_filter( $url, $theme_id ) {
 function thds_wporg_theme_download_count_filter( $count, $theme_id ) {
 
 	return '' === $count ? thds_get_wporg_theme_downloaded( $theme_id ) : $count;
+}
+
+/**
+ * Filters the theme install count.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $count
+ * @param  int     $theme_id
+ * @return string
+ */
+function thds_wporg_theme_install_count_filter( $count, $theme_id ) {
+
+	return '' === $count ? thds_get_wporg_theme_active_installs( $theme_id ) : $count;
 }
 
 /**
