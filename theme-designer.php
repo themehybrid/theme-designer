@@ -3,7 +3,7 @@
  * Plugin Name: Theme Designer
  * Plugin URI:  http://themehybrid.com/plugins/theme-designer
  * Description: A plugin for theme authors to manage their theme portfolios.
- * Version:     1.0.0-dev
+ * Version:     1.0.0
  * Author:      Justin Tadlock
  * Author URI:  http://themehybrid.com
  * Text Domain: theme-designer
