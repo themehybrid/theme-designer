@@ -61,9 +61,6 @@ final class THDS_Settings_Page {
 
 			// Register settings.
 			add_action( 'admin_init', array( $this, 'register_settings' ) );
-
-			// Add help tabs.
-	///		add_action( "load-{$this->settings_page}", array( $this, 'add_help_tabs' ) );
 		}
 	}
 
@@ -477,80 +474,6 @@ final class THDS_Settings_Page {
 			</form>
 
 		</div><!-- wrap -->
-	<?php }
-
-	/**
-	 * Adds help tabs.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function add_help_tabs() {
-
-		// Get the current screen.
-		$screen = get_current_screen();
-
-		// General settings help tab.
-		$screen->add_help_tab(
-			array(
-				'id'       => 'general',
-				'title'    => esc_html__( 'General Settings', 'theme-designer' ),
-				'callback' => array( $this, 'help_tab_general' )
-			)
-		);
-
-		// Permalinks settings help tab.
-		$screen->add_help_tab(
-			array(
-				'id'       => 'permalinks',
-				'title'    => esc_html__( 'Permalinks', 'theme-designer' ),
-				'callback' => array( $this, 'help_tab_permalinks' )
-			)
-		);
-
-		// Set the help sidebar.
-		$screen->set_help_sidebar( thds_get_help_sidebar_text() );
-	}
-
-	/**
-	 * Displays the general settings help tab.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function help_tab_general() { ?>
-
-		<ul>
-			<li><?php _e( '<strong>Title:</strong> Allows you to set the title for the portfolio section on your site. This is general shown on the portfolio themes archive, but themes and other plugins may use it in other ways.', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>Description:</strong> This is the description for your portfolio. Some themes may display this on the portfolio themes archive.', 'theme-designer' ); ?></li>
-		</ul>
-	<?php }
-
-	/**
-	 * Displays the permalinks help tab.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function help_tab_permalinks() { ?>
-
-		<ul>
-			<li><?php _e( '<strong>Portfolio Base:</strong> The primary URL for the portfolio section on your site. It lists your portfolio themes.', 'theme-designer' ); ?></li>
-			<li>
-				<?php _e( '<strong>Project Slug:</strong> The slug for single portfolio themes. You can use something custom, leave this field empty, or use one of the following tags:', 'theme-designer' ); ?>
-				<ul>
-					<li><?php printf( esc_html__( '%s - The theme author name.', 'theme-designer' ), '<code>%author%</code>' ); ?></li>
-					<li><?php printf( esc_html__( '%s - The theme subject.', 'theme-designer' ), '<code>%' . thds_get_subject_taxonomy() . '%</code>' ); ?></li>
-					<li><?php printf( esc_html__( '%s - The theme tag.', 'theme-designer' ), '<code>%' . thds_get_feature_taxonomy() . '%</code>' ); ?></li>
-				</ul>
-			</li>
-			<li><?php _e( '<strong>Category Slug:</strong> The base slug used for portfolio subject archives.', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>Tag Slug:</strong> The base slug used for portfolio tag archives.', 'theme-designer' ); ?></li>
-			<li><?php _e( '<strong>Author Slug:</strong> The base slug used for portfolio author archives.', 'theme-designer' ); ?></li>
-		</ul>
 	<?php }
 
 	/**
