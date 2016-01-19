@@ -2,10 +2,10 @@
 /**
  * Base section class for the fields manager.
  *
- * @package    CustomContentPortfolio
+ * @package    FieldsManager
  * @subpackage Admin
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2013-2015, Justin Tadlock
+ * @copyright  Copyright (c) 2013-2016, Justin Tadlock
  * @link       http://themehybrid.com/plugins/custom-content-portfolio
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */

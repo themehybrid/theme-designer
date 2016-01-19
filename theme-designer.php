@@ -19,7 +19,7 @@
  * @package   ThemeDesigner
  * @version   1.0.0
  * @author    Justin Tadlock <justin@justintadlock.com>
- * @copyright Copyright (c) 2015, Justin Tadlock
+ * @copyright Copyright (c) 2015-2016, Justin Tadlock
  * @link      http://themehybrid.com/plugins/theme-designer
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */

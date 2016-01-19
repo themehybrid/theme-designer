@@ -4,11 +4,7 @@
 
 Then, this plugin may be just right for you.  Theme Designer creates a system for managing your theme releases on your own Web site.
 
-It's actually a project that I've been building and tweaking since I launched my own site, [Theme Hybrid](http://themehybrid.com), way back in 2008.  I use it to run the [themes section](http://themehybrid.com/themes) on the site, so it has tons of useful tools for doing just that.  It's just that I've never packaged it all up to make it useful for others.
-
-**Important Note #1:** This plugin is still in beta and probably shouldn't be used on a live site.
-
-**Important Note #2:** This plugin is only designed to work with WordPress version 4.4.
+It's actually a project that I've been building and tweaking since I launched my own site, [Theme Hybrid](http://themehybrid.com), way back in 2008.  I use it to run the [themes section](http://themehybrid.com/themes) on the site, so it has tons of useful tools for doing just that.  It's just that I've never packaged it all up to make it useful for others until now.
 
 ## Features
 
@@ -32,4 +28,4 @@ If you need professional plugin support from me, the plugin author, you can acce
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2015 &copy; [Justin Tadlock](http://justintadlock.com).
+2015-2016 &copy; [Justin Tadlock](http://justintadlock.com).
