@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Theme Designer 1.0.0-dev\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/theme-designer\n"
-"POT-Creation-Date: 2016-01-14 20:07:07+00:00\n"
+"POT-Creation-Date: 2016-01-19 00:06:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,103 +12,107 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: admin/class-manage-themes.php:152
+#: admin/class-manage-themes.php:158
 msgid "Sticky <span class=\"count\">(%s)</span>"
 msgid_plural "Sticky <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: admin/class-manage-themes.php:226 inc/core/post-types.php:84
+#: admin/class-manage-themes.php:232 inc/core/post-types.php:84
 #: inc/core/post-types.php:86
 msgid "Theme"
 msgstr ""
 
-#: admin/class-manage-themes.php:230 inc/core/post-types.php:96
+#: admin/class-manage-themes.php:236 inc/core/post-types.php:96
 msgid "Screenshot"
 msgstr ""
 
-#: admin/class-manage-themes.php:237
+#: admin/class-manage-themes.php:243
 msgid "Downloads"
 msgstr ""
 
-#: admin/class-manage-themes.php:238
+#: admin/class-manage-themes.php:244
+msgid "Installs"
+msgstr ""
+
+#: admin/class-manage-themes.php:245
 msgid "Rating"
 msgstr ""
 
-#: admin/class-manage-themes.php:323 admin/class-theme-edit.php:141
+#: admin/class-manage-themes.php:338 admin/class-theme-edit.php:141
 #: admin/functions-admin.php:35
 msgid "Sticky"
 msgstr ""
 
-#: admin/class-manage-themes.php:348
+#: admin/class-manage-themes.php:363
 msgid "Unstick"
 msgstr ""
 
-#: admin/class-manage-themes.php:348
+#: admin/class-manage-themes.php:363
 msgid "Stick"
 msgstr ""
 
-#: admin/class-manage-themes.php:416
+#: admin/class-manage-themes.php:431
 msgid "Overview"
 msgstr ""
 
-#: admin/class-manage-themes.php:425
+#: admin/class-manage-themes.php:440
 msgid "Screen Content"
 msgstr ""
 
-#: admin/class-manage-themes.php:434
+#: admin/class-manage-themes.php:449
 msgid "Available Actions"
 msgstr ""
 
-#: admin/class-manage-themes.php:453
+#: admin/class-manage-themes.php:468
 msgid "This screen provides access to all of your theme projects. You can customize the display of this screen to suit your workflow."
 msgstr ""
 
-#: admin/class-manage-themes.php:467
+#: admin/class-manage-themes.php:482
 msgid "You can customize the display of this screen's contents in a number of ways:"
 msgstr ""
 
-#: admin/class-manage-themes.php:471
+#: admin/class-manage-themes.php:486
 msgid "You can hide/display columns based on your needs and decide how many themes to list per screen using the Screen Options tab."
 msgstr ""
 
-#: admin/class-manage-themes.php:472
+#: admin/class-manage-themes.php:487
 msgid "You can filter the list of themes by post status using the text links in the upper left to show All, Published, Draft, or Trashed themes. The default view is to show all themes."
 msgstr ""
 
-#: admin/class-manage-themes.php:473
+#: admin/class-manage-themes.php:488
 msgid "You can view themes in a simple title list or with an excerpt. Choose the view you prefer by clicking on the icons at the top of the list on the right."
 msgstr ""
 
-#: admin/class-manage-themes.php:474
+#: admin/class-manage-themes.php:489
 msgid "You can refine the list to show only themes with a specific subject, with a specific feature, or from a specific month by using the dropdown menus above the themes list. Click the Filter button after making your selection. You also can refine the list by clicking on the theme author or subject in the posts list."
 msgstr ""
 
-#: admin/class-manage-themes.php:488
+#: admin/class-manage-themes.php:503
 msgid "Hovering over a row in the themes list will display action links that allow you to manage your theme. You can perform the following actions:"
 msgstr ""
 
-#: admin/class-manage-themes.php:492
+#: admin/class-manage-themes.php:507
 msgid "<strong>Edit</strong> takes you to the editing screen for that theme. You can also reach that screen by clicking on the theme title."
 msgstr ""
 
-#: admin/class-manage-themes.php:493
+#: admin/class-manage-themes.php:508
 msgid "<strong>Quick Edit</strong> provides inline access to the metadata of your theme, allowing you to update theme details without leaving this screen."
 msgstr ""
 
-#: admin/class-manage-themes.php:494
+#: admin/class-manage-themes.php:509
 msgid "<strong>Trash</strong> removes your theme from this list and places it in the trash, from which you can permanently delete it."
 msgstr ""
 
-#: admin/class-manage-themes.php:495
+#: admin/class-manage-themes.php:510
 msgid "<strong>Stick</strong> puts your theme in the list of \"sticky\" themes, which are shown first on the theme archive page."
 msgstr ""
 
-#: admin/class-manage-themes.php:496
+#: admin/class-manage-themes.php:511
 msgid "<strong>Preview</strong> will show you what your draft theme will look like if you publish it. View will take you to your live site to view the theme. Which link is available depends on your theme's status."
 msgstr ""
 
-#: admin/class-settings.php:53 admin/class-settings.php:469
+#: admin/class-settings.php:53 admin/class-settings.php:466
 msgid "Theme Designer Settings"
 msgstr ""
 
@@ -116,198 +120,154 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: admin/class-settings.php:84 admin/functions-admin.php:70
+#: admin/class-settings.php:81 admin/functions-admin.php:70
 msgid "General"
 msgstr ""
 
-#: admin/class-settings.php:85
+#: admin/class-settings.php:82
 msgid "Reading"
 msgstr ""
 
-#: admin/class-settings.php:86 admin/functions-admin.php:78
+#: admin/class-settings.php:83 admin/functions-admin.php:78
 msgid "Integration"
 msgstr ""
 
-#: admin/class-settings.php:87 admin/class-settings.php:507
+#: admin/class-settings.php:84
 msgid "Permalinks"
 msgstr ""
 
-#: admin/class-settings.php:92
+#: admin/class-settings.php:89
 msgid "Menu Title"
 msgstr ""
 
-#: admin/class-settings.php:93
+#: admin/class-settings.php:90
 msgid "Archive Title"
 msgstr ""
 
-#: admin/class-settings.php:94
+#: admin/class-settings.php:91
 msgid "Archive Description"
 msgstr ""
 
-#: admin/class-settings.php:97
+#: admin/class-settings.php:94
 msgid "Themes Per Page"
 msgstr ""
 
-#: admin/class-settings.php:98
+#: admin/class-settings.php:95
 msgid "Sort By"
 msgstr ""
 
-#: admin/class-settings.php:99
+#: admin/class-settings.php:96
 msgid "Order"
 msgstr ""
 
-#: admin/class-settings.php:102
+#: admin/class-settings.php:99
 msgid "WordPress.org"
 msgstr ""
 
-#: admin/class-settings.php:103
+#: admin/class-settings.php:100
 msgid "WordPress.org Transient"
 msgstr ""
 
-#: admin/class-settings.php:106
+#: admin/class-settings.php:103
 msgid "Rewrite Base"
 msgstr ""
 
-#: admin/class-settings.php:107
+#: admin/class-settings.php:104
 msgid "Theme Slug"
 msgstr ""
 
-#: admin/class-settings.php:108
+#: admin/class-settings.php:105
 msgid "Subject Slug"
 msgstr ""
 
-#: admin/class-settings.php:109
+#: admin/class-settings.php:106
 msgid "Feature Slug"
 msgstr ""
 
-#: admin/class-settings.php:110
+#: admin/class-settings.php:107
 msgid "Author Slug"
 msgstr ""
 
-#: admin/class-settings.php:130 admin/class-settings.php:131
+#: admin/class-settings.php:127 admin/class-settings.php:128
 #: inc/core/options.php:212 inc/core/post-types.php:83
 #: inc/core/post-types.php:95
 msgid "Themes"
 msgstr ""
 
-#: admin/class-settings.php:178
+#: admin/class-settings.php:175
 msgid "General settings for the themes section of your site."
 msgstr ""
 
-#: admin/class-settings.php:194
+#: admin/class-settings.php:191
 msgid "The title for the themes admin menu."
 msgstr ""
 
-#: admin/class-settings.php:210
+#: admin/class-settings.php:207
 msgid "The title used for theme archive."
 msgstr ""
 
-#: admin/class-settings.php:234
+#: admin/class-settings.php:231
 msgid "Your theme archive description. This may or may not be shown by your theme."
 msgstr ""
 
-#: admin/class-settings.php:248
+#: admin/class-settings.php:245
 msgid "Reading settings for the front end of your site."
 msgstr ""
 
-#: admin/class-settings.php:276
+#: admin/class-settings.php:273
 msgid "Author"
 msgstr ""
 
-#: admin/class-settings.php:277
+#: admin/class-settings.php:274
 msgid "Date (Published)"
 msgstr ""
 
-#: admin/class-settings.php:278
+#: admin/class-settings.php:275
 msgid "Date (Modified)"
 msgstr ""
 
-#: admin/class-settings.php:279
+#: admin/class-settings.php:276
 msgid "ID"
 msgstr ""
 
-#: admin/class-settings.php:280
+#: admin/class-settings.php:277
 msgid "Random"
 msgstr ""
 
-#: admin/class-settings.php:281
+#: admin/class-settings.php:278
 msgid "Slug"
 msgstr ""
 
-#: admin/class-settings.php:282
+#: admin/class-settings.php:279
 msgid "Title"
 msgstr ""
 
-#: admin/class-settings.php:306
+#: admin/class-settings.php:303
 msgid "Ascending"
 msgstr ""
 
-#: admin/class-settings.php:307
+#: admin/class-settings.php:304
 msgid "Descending"
 msgstr ""
 
-#: admin/class-settings.php:331
+#: admin/class-settings.php:328
 msgid "Integrate your themes with third-party sites."
 msgstr ""
 
-#: admin/class-settings.php:346
+#: admin/class-settings.php:343
 msgid "Use the WordPress.org themes API?"
 msgstr ""
 
-#: admin/class-settings.php:362
+#: admin/class-settings.php:359
 msgid "How often (in days) to update theme data from the WordPress.org API."
 msgstr ""
 
-#: admin/class-settings.php:376
+#: admin/class-settings.php:373
 msgid "Set up custom permalinks for the themes section on your site."
 msgstr ""
 
-#: admin/class-settings.php:476
+#: admin/class-settings.php:473
 msgid "Update Settings"
-msgstr ""
-
-#: admin/class-settings.php:498
-msgid "General Settings"
-msgstr ""
-
-#: admin/class-settings.php:526
-msgid "<strong>Title:</strong> Allows you to set the title for the portfolio section on your site. This is general shown on the portfolio themes archive, but themes and other plugins may use it in other ways."
-msgstr ""
-
-#: admin/class-settings.php:527
-msgid "<strong>Description:</strong> This is the description for your portfolio. Some themes may display this on the portfolio themes archive."
-msgstr ""
-
-#: admin/class-settings.php:541
-msgid "<strong>Portfolio Base:</strong> The primary URL for the portfolio section on your site. It lists your portfolio themes."
-msgstr ""
-
-#: admin/class-settings.php:543
-msgid "<strong>Project Slug:</strong> The slug for single portfolio themes. You can use something custom, leave this field empty, or use one of the following tags:"
-msgstr ""
-
-#: admin/class-settings.php:545
-msgid "%s - The theme author name."
-msgstr ""
-
-#: admin/class-settings.php:546
-msgid "%s - The theme subject."
-msgstr ""
-
-#: admin/class-settings.php:547
-msgid "%s - The theme tag."
-msgstr ""
-
-#: admin/class-settings.php:550
-msgid "<strong>Category Slug:</strong> The base slug used for portfolio subject archives."
-msgstr ""
-
-#: admin/class-settings.php:551
-msgid "<strong>Tag Slug:</strong> The base slug used for portfolio tag archives."
-msgstr ""
-
-#: admin/class-settings.php:552
-msgid "<strong>Author Slug:</strong> The base slug used for portfolio author archives."
 msgstr ""
 
 #: admin/class-theme-edit.php:141 admin/functions-admin.php:36
@@ -922,6 +882,13 @@ msgstr ""
 
 #: inc/core/taxonomies.php:241
 msgid "Features deleted."
+msgstr ""
+
+#. Translators: Approximate count. The %s is a number.  The + means "more
+#. than."
+
+#: inc/template/theme.php:981
+msgid "%s+"
 msgstr ""
 
 #: theme-designer.php:121 theme-designer.php:132
